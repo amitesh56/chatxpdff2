@@ -9,6 +9,9 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 
+header = {
+"authorization" : st.secrets["OPENAI_API_KEY"]
+}
 
 def get_pdf_text(pdf_docs):
     text = ""
